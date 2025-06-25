@@ -42,7 +42,7 @@ for how to set up the build environment.
 
 ## Building from a freshly checked-out source
 
-If you just checked out the Protobuf source from github, you need to
+If you just checked out the Protobuf source from GitHub, you need to
 generate the configure script.
 
 Under the protobuf project directory:
@@ -54,7 +54,7 @@ $ ./autogen.sh
 
 ### Build the artifact for each platform
 
-Run the build-protoc.sh script under this protoc-artifacts directory to build the protoc
+Run the `build-protoc.sh` script under this protoc-artifacts directory to build the protoc
 artifact for each platform.  For example:
 
 ```
@@ -65,7 +65,7 @@ $ ./build-protoc.sh linux x86_64 protoc
 The above command will produce a `target/linux/x86_64/protoc` binary under the
 protoc-artifacts directory.
 
-For a list of supported platforms, see the comments in the build-protoc.sh
+For a list of supported platforms, see the comments in the `build-protoc.sh`
 script. We only use this script to build artifacts on Ubuntu and MacOS (both
 with x86_64, and do cross-compilation for other platforms.
 
@@ -151,10 +151,10 @@ https://oss.sonatype.org/#stagingRepositories and find the repository, usually
 in the name like ``comgoogle-123``. Verify that the staging repository has all
 the binaries, close and release this repository.
 
-## Upload zip packages to github release page.
+## Upload zip packages to GitHub release page.
 After uploading protoc artifacts to Maven Central repository, run the
-build-zip.sh script to bulid zip packages for these protoc binaries
-and upload these zip packages to the download section of the github
+`build-zip.sh` script to bulid zip packages for these protoc binaries
+and upload these zip packages to the download section of the GitHub
 release. For example:
 
 ```
