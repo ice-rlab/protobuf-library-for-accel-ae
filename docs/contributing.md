@@ -22,6 +22,14 @@ pip install mkdocs mkdocs-github-admonitions-plugin
 
 Check out MkDocs' [Getting Started](https://www.mkdocs.org/getting-started/) and [User Guide](https://www.mkdocs.org/user-guide/) pages to get you up to speed on how to add new pages and have them show up on the nav bar, seeing your changes on your local browser and changing the MkDocs configuration to make these docs better!
 
+## Deploying the Docs
+
+To deploy the docs to the GitHub Pages site execute the command:
+
+```bash
+mkdocs gh-deploy
+```
+
 ## Docs Guidelines
 
 ### Admonitions (aka Alerts)
