@@ -1,0 +1,5 @@
+site_name: Protobuf Acc Docs
+nav:
+  - Home: index.md
+  - Installation: installation.md
+theme: readthedocs
