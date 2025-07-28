@@ -89,7 +89,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="installation-instructions">Installation Instructions</h1>
-<p>This page compiles (pun intended 😉) the installation instructions for the <code>protoc</code> compiler (v.3.11.2), the Protobuf C++ runtime and header files with support for the <a href="https://dl.acm.org/doi/abs/10.1145/3466752.3480051">Protobuf accelerator</a> on a Linux x86_64 machine.</p>
+<p>This page compiles the installation instructions for the <code>protoc</code> compiler, the Protobuf C++ runtime and header files with support for the Protobuf accelerator on a Linux machine.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These instructions are not the only way to install the compiler, C++ runtime and header files. However, they are the most straightforward way to install them.</p>
@@ -135,10 +135,12 @@ make
 <p>If the <code>make check</code> fails, it is possible to continue with the install, but it is likely some features will not work correctly.</p>
 </div>
 <h2 id="install-protoc-and-c-runtime-and-header-files">Install <code>protoc</code> and C++ Runtime and Header Files</h2>
-<p>Run the following commands to install
-- the <code>protoc</code> compiler in <code>/usr/local/bin</code>, and
-- the C++ runtime in <code>/usr/local/lib</code>
-- the C++ header files in <code>/usr/local/include/google/protobuf/</code></p>
+<p>Run the following commands to install</p>
+<ul>
+<li>the <code>protoc</code> compiler in <code>/usr/local/bin</code>, and</li>
+<li>the C++ runtime in <code>/usr/local/lib</code></li>
+<li>the C++ header files in <code>/usr/local/include/google/protobuf/</code></li>
+</ul>
 <pre><code class="language-bash">sudo make install
 sudo ldconfig # refresh the shared library cache
 </code></pre>
