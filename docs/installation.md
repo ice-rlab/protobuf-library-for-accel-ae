@@ -71,6 +71,7 @@ make check
 ## Install `protoc` and C++ Runtime and Header Files
 
 Run the following commands to install
+
 - the `protoc` compiler in `/usr/local/bin`, and
 - the C++ runtime in `/usr/local/lib`
 - the C++ header files in `/usr/local/include/google/protobuf/`
