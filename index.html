@@ -44,6 +44,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#protocol-buffers-hardware-accelerator">Protocol Buffers Hardware Accelerator</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#protocol-buffers-hardware-accelerator-project-structure">Protocol Buffers Hardware Accelerator Project Structure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-accelerator-platform">Hardware Accelerator Platform</a>
+    </li>
         </ul>
     </li>
     </ul>
@@ -93,9 +97,10 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>While completing the tutorial pay attention to the components of Protocol Buffers, and their role in the serialization/deserialization workflow.</p>
+<p>Hopefully, you also noticed that protocol buffers are also referred to as "protobufs" for short.</p>
 </div>
 <h3 id="protocol-buffers-hardware-accelerator">Protocol Buffers Hardware Accelerator</h3>
-<p>Once you have a decent understanding of Protocol Buffers, go ahead and read the paper:</p>
+<p>Once you have a decent understanding of protocol buffers, go ahead and read the paper:</p>
 <ol>
 <li><a href="https://dl.acm.org/doi/10.1145/3466752.3480051">A Hardware Accelerator for Protocol Buffers</a> by S Karandikar, et. al.</li>
 </ol>
@@ -103,6 +108,42 @@
 <p class="admonition-title">Tip</p>
 <p>As you read the paper keep your experience from the tutorial in mind so that you notice where the hardware accelerator makes things different or the same according to the paper.</p>
 </div>
+<h3 id="protocol-buffers-hardware-accelerator-project-structure">Protocol Buffers Hardware Accelerator Project Structure</h3>
+<p>Okay okay, you got the fundamentals down. The goal here is to try to create a map in your head of the pieces involved and some of the connecting roads between them.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Git submodules is the backbone of the structure of this project. Here are a couple of resources to get you up to speed/refresh you on git submodules:</p>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git Tools - Submodules | Official git docs</a></li>
+<li><a href="https://www.cyberdemon.org/2024/03/20/submodules.html">Demystifying git submodules | Dmitry Mazin Developer Blog</a></li>
+</ul>
+</div>
+<p>As you saw in the artifact appendix of the accelerator paper, the project consists of five git repositories:</p>
+<ul>
+<li><strong>protobuf-libary-for-accel-ae</strong>, and</li>
+<li><strong>protoacc</strong> (in the paper it's called <em>protoacc-ae</em>, in GitHub it's called protoacc, we'll go with protoacc),</li>
+<li><strong>firesim-protoacc-ae</strong>,</li>
+<li><strong>chipyard-protoacc-ae</strong>,</li>
+<li><strong>HyperProtoBench</strong></li>
+</ul>
+<p>Don't panic (just yet). We'll go one by one.</p>
+<ul>
+<li><a href="https://github.com/ice-rlab/protobuf-library-for-accel-ae/tree/accel">ice-rlab/protobuf-library-for-accel-ae</a>: Our fork of the protobuf compiler, C++ runtime and library (header files) with support for the accelerator and home to these docs.</li>
+<li><a href="https://github.com/ice-rlab/protoacc">ice-rlab/protoacc</a>: Our fork of the accelerator design, software (library for custom instructions, microbenchmarks, FireSim workloads), and scripts (that automate installation, testing and simulation).</li>
+<li><a href="https://github.com/sagark/firesim-protoacc-ae">sagark/firesim-protoacc-ae</a>: Top-level FireSim environment with support for protocol buffers accelerator.</li>
+<li><a href="https://github.com/sagark/chipyard-protoacc-ae">sagark/chipyard-protoacc-ae</a>: Chipyard RISC-V SoC generation environment with protocol buffers accelerator.</li>
+<li><a href="https://github.com/sagark/HyperProtoBench">sagark/HyperProtoBench</a>: Serialization/deserialization benchmarks.</li>
+</ul>
+<p>Why have we only forked the first two repos? Those are the only two repos we've done work on so far.</p>
+<p>What is FireSim and Chipyard? Buckle up your seatbelt 💺...</p>
+<h3 id="hardware-accelerator-platform">Hardware Accelerator Platform</h3>
+<p>Chipyard is the platform used to design and simulate the protocol buffers accelerator. The following diagram illustrates how FireSim fits in with Chipyard as well as other tools and how Chipyard fits within the <a href="">ice-rlab/riscv-performance-characterization</a> work:</p>
+<p><img alt="FireSim as a tool available in Chipyard and Chipyard as a platform in the ICE-RLab's RISC-V Performance Characterization work" src="imgs/riscv-performance-characterization-high-level.png" /></p>
+<p>To understand how the protocol buffers accelerator was designed, simulated and tested using FireSim and Chipyard, </p>
+<ul>
+<li>watch the <a href="https://fires.im/asplos-2023-tutorial/">videos of the full-day tutorial at ASPLOS 2023</a></li>
+<li>read through the official <a href="https://chipyard.readthedocs.io/en/latest/#">Chipyard</a> and <a href="https://fires.im/">FireSim</a> docs.</li>
+</ul>
               
             </div>
           </div><footer>
@@ -150,5 +191,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-08-25 17:22:16.965292+00:00
+Build Date UTC : 2025-08-25 20:34:22.979891+00:00
 -->

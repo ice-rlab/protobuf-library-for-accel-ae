@@ -42,6 +42,8 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#manual-installation">Manual Installation</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#1-clone-repo">1. Clone Repo</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#2-update-the-git-submodules">2. Update the Git Submodules</a>
@@ -57,6 +59,8 @@
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#install-protoc-and-c-runtime-and-header-files">Install protoc and C++ Runtime and Header Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automated-installation">Automated Installation</a>
     </li>
     </ul>
                 </li>
@@ -89,10 +93,15 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="installation-instructions">Installation Instructions</h1>
-<p>This page compiles the installation instructions for the <code>protoc</code> compiler, the Protobuf C++ runtime and header files with support for the Protobuf accelerator on a Linux machine.</p>
+<h2 id="manual-installation">Manual Installation</h2>
+<p>This page compiles the <strong>manual</strong> installation instructions for the <code>protoc</code> compiler, the Protobuf C++ runtime and header files with support for the Protobuf accelerator on a Linux machine.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These instructions are not the only way to install the compiler, C++ runtime and header files. However, they are the most straightforward way to install them.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We tested this instructions with a Linux machine running Ubuntu 22.04 with an x86_64 CPU.</p>
 </div>
 <h2 id="1-clone-repo">1. Clone Repo</h2>
 <p>The first step is to clone this repository. Below is the command to clone this repository using the <code>git</code> CLI tool and SSH.</p>
@@ -149,6 +158,9 @@ sudo ldconfig # refresh the shared library cache
 <p>It's recommended to rename the installed binary of the <code>protoc</code> compiler to make it clear that this version has support for the Protobuf accelerator:</p>
 <p><code>sudo mv /usr/local/bin/protoc /usr/local/bin/protoc-acc</code></p>
 </div>
+<h2 id="automated-installation">Automated Installation</h2>
+<p>The <a href="https://github.com/ice-rlab/protoacc/blob/master/microbenchmarks/build-protobuf-all.sh">build-protobuf-all.sh</a> script automates the installation of <code>protoc</code> compiler, C++ runtime and headers for both x86 and RISC-V architectures.</p>
+<p>The script installs them in a local directory and not in the <code>/usr/</code> path.</p>
               
             </div>
           </div><footer>
