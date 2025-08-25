@@ -1,4 +1,4 @@
-site_name: Protobuf Acc Docs
+site_name: Protocol Buffers Hardware Accelerator - ICE-RLab Docs
 nav:
   - Home: index.md
   - Installation: installation.md
