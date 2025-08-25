@@ -10,7 +10,7 @@ This page compiles the **manual** installation instructions for the `protoc` com
 > [!NOTE]
 > We tested this instructions with a Linux machine running Ubuntu 22.04 with an x86_64 CPU.
 
-## 1. Clone Repo
+### 1. Clone Repo
 
 The first step is to clone this repository. Below is the command to clone this repository using the `git` CLI tool and SSH.
 
@@ -18,7 +18,7 @@ The first step is to clone this repository. Below is the command to clone this r
 git clone git@github.com:ice-rlab/protobuf-library-for-accel-ae.git
 ```
 
-## 2. Update the Git Submodules
+### 2. Update the Git Submodules
 
 After cloning the repository, go into the local repo directory and update the git submodules.
 
@@ -27,9 +27,9 @@ cd protobuf-library-for-accel-ae
 git submodule update --init --recursive
 ```
 
-## 3. Build the `protoc` Compiler and C++ Runtime
+### 3. Build the `protoc` Compiler and C++ Runtime
 
-### 3.1 Pre-requisites
+#### 3.1 Pre-requisites
 
 The following tools are needed:
 
@@ -47,7 +47,7 @@ On Ubuntu/Debian, you can install these tools with the following command:
 sudo apt-get install autoconf automake curl libtool g++ make unzip
 ```
 
-### 3.2 Generate the Config Script
+#### 3.2 Generate the Config Script
 
 In the root directory of your local repo execute the `autogen.sh` Bash script.
 
@@ -55,7 +55,7 @@ In the root directory of your local repo execute the `autogen.sh` Bash script.
 ./autogen.sh
 ```
 
-### 3.3 Build the `protoc` Compiler and C++ Runtime
+#### 3.3 Build the `protoc` Compiler and C++ Runtime
 
 Then execute the following commands to build the compiler and C++ runtime:
 
@@ -73,7 +73,7 @@ make check
 > [!NOTE]
 > If the `make check` fails, it is possible to continue with the install, but it is likely some features will not work correctly.
 
-## Install `protoc` and C++ Runtime and Header Files
+### Install `protoc` and C++ Runtime and Header Files
 
 Run the following commands to install
 
