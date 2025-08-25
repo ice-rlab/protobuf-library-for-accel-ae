@@ -1,9 +1,14 @@
 # Installation Instructions
 
-This page compiles the installation instructions for the `protoc` compiler, the Protobuf C++ runtime and header files with support for the Protobuf accelerator on a Linux machine.
+## Manual Installation
+
+This page compiles the **manual** installation instructions for the `protoc` compiler, the Protobuf C++ runtime and header files with support for the Protobuf accelerator on a Linux machine.
 
 > [!NOTE]
 > These instructions are not the only way to install the compiler, C++ runtime and header files. However, they are the most straightforward way to install them. 
+
+> [!NOTE]
+> We tested this instructions with a Linux machine running Ubuntu 22.04 with an x86_64 CPU.
 
 ## 1. Clone Repo
 
@@ -87,4 +92,10 @@ sudo ldconfig # refresh the shared library cache
 > ```
 > sudo mv /usr/local/bin/protoc /usr/local/bin/protoc-acc
 > ```
+
+## Automated Installation
+
+The [build-protobuf-all.sh](https://github.com/ice-rlab/protoacc/blob/master/microbenchmarks/build-protobuf-all.sh) script automates the installation of `protoc` compiler, C++ runtime and headers for both x86 and RISC-V architectures.
+
+The script installs them in a local directory and not in the `/usr/` path.
 
