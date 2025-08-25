@@ -43,22 +43,24 @@
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#manual-installation">Manual Installation</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1-clone-repo">1. Clone Repo</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-update-the-git-submodules">2. Update the Git Submodules</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-build-the-protoc-compiler-and-c-runtime">3. Build the protoc Compiler and C++ Runtime</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#31-pre-requisites">3.1 Pre-requisites</a>
+    <li class="toctree-l3"><a class="reference internal" href="#1-clone-repo">1. Clone Repo</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#32-generate-the-config-script">3.2 Generate the Config Script</a>
+    <li class="toctree-l3"><a class="reference internal" href="#2-update-the-git-submodules">2. Update the Git Submodules</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#33-build-the-protoc-compiler-and-c-runtime">3.3 Build the protoc Compiler and C++ Runtime</a>
+    <li class="toctree-l3"><a class="reference internal" href="#3-build-the-protoc-compiler-and-c-runtime">3. Build the protoc Compiler and C++ Runtime</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-pre-requisites">3.1 Pre-requisites</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-generate-the-config-script">3.2 Generate the Config Script</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-build-the-protoc-compiler-and-c-runtime">3.3 Build the protoc Compiler and C++ Runtime</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#install-protoc-and-c-runtime-and-header-files">Install protoc and C++ Runtime and Header Files</a>
+    <li class="toctree-l3"><a class="reference internal" href="#install-protoc-and-c-runtime-and-header-files">Install protoc and C++ Runtime and Header Files</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#automated-installation">Automated Installation</a>
     </li>
@@ -103,17 +105,17 @@
 <p class="admonition-title">Note</p>
 <p>We tested this instructions with a Linux machine running Ubuntu 22.04 with an x86_64 CPU.</p>
 </div>
-<h2 id="1-clone-repo">1. Clone Repo</h2>
+<h3 id="1-clone-repo">1. Clone Repo</h3>
 <p>The first step is to clone this repository. Below is the command to clone this repository using the <code>git</code> CLI tool and SSH.</p>
 <pre><code class="language-bash">git clone git@github.com:ice-rlab/protobuf-library-for-accel-ae.git
 </code></pre>
-<h2 id="2-update-the-git-submodules">2. Update the Git Submodules</h2>
+<h3 id="2-update-the-git-submodules">2. Update the Git Submodules</h3>
 <p>After cloning the repository, go into the local repo directory and update the git submodules.</p>
 <pre><code class="language-bash">cd protobuf-library-for-accel-ae
 git submodule update --init --recursive
 </code></pre>
-<h2 id="3-build-the-protoc-compiler-and-c-runtime">3. Build the <code>protoc</code> Compiler and C++ Runtime</h2>
-<h3 id="31-pre-requisites">3.1 Pre-requisites</h3>
+<h3 id="3-build-the-protoc-compiler-and-c-runtime">3. Build the <code>protoc</code> Compiler and C++ Runtime</h3>
+<h4 id="31-pre-requisites">3.1 Pre-requisites</h4>
 <p>The following tools are needed:</p>
 <ul>
 <li>autoconf</li>
@@ -127,11 +129,11 @@ git submodule update --init --recursive
 <p>On Ubuntu/Debian, you can install these tools with the following command:</p>
 <pre><code class="language-bash">sudo apt-get install autoconf automake curl libtool g++ make unzip
 </code></pre>
-<h3 id="32-generate-the-config-script">3.2 Generate the Config Script</h3>
+<h4 id="32-generate-the-config-script">3.2 Generate the Config Script</h4>
 <p>In the root directory of your local repo execute the <code>autogen.sh</code> Bash script.</p>
 <pre><code class="language-bash">./autogen.sh
 </code></pre>
-<h3 id="33-build-the-protoc-compiler-and-c-runtime">3.3 Build the <code>protoc</code> Compiler and C++ Runtime</h3>
+<h4 id="33-build-the-protoc-compiler-and-c-runtime">3.3 Build the <code>protoc</code> Compiler and C++ Runtime</h4>
 <p>Then execute the following commands to build the compiler and C++ runtime:</p>
 <pre><code class="language-bash">./configure
 make
@@ -143,7 +145,7 @@ make
 <p class="admonition-title">Note</p>
 <p>If the <code>make check</code> fails, it is possible to continue with the install, but it is likely some features will not work correctly.</p>
 </div>
-<h2 id="install-protoc-and-c-runtime-and-header-files">Install <code>protoc</code> and C++ Runtime and Header Files</h2>
+<h3 id="install-protoc-and-c-runtime-and-header-files">Install <code>protoc</code> and C++ Runtime and Header Files</h3>
 <p>Run the following commands to install</p>
 <ul>
 <li>the <code>protoc</code> compiler in <code>/usr/local/bin</code>, and</li>
