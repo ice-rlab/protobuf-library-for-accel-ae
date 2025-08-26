@@ -38,8 +38,8 @@ Okay okay, you got the fundamentals down. The goal here is to try to create a ma
 > - [Demystifying git submodules | Dmitry Mazin Developer Blog](https://www.cyberdemon.org/2024/03/20/submodules.html)
 As you saw in the artifact appendix of the accelerator paper, the project consists of five git repositories:
 
-- **protobuf-libary-for-accel-ae**, and
-- **protoacc** (in the paper it's called *protoacc-ae*, in GitHub it's called protoacc, we'll go with protoacc),
+- **protobuf-library-for-accel-ae**,
+- **protoacc** (in the paper it's called *protoacc-ae*, in GitHub it's called protoacc, we'll refer to it as protoacc),
 - **firesim-protoacc-ae**,
 - **chipyard-protoacc-ae**,
 - **HyperProtoBench**

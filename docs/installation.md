@@ -95,7 +95,7 @@ sudo ldconfig # refresh the shared library cache
 
 ## Automated Installation
 
-The [build-protobuf-all.sh](https://github.com/ice-rlab/protoacc/blob/master/microbenchmarks/build-protobuf-all.sh) script automates the installation of `protoc` compiler, C++ runtime and headers for both x86 and RISC-V architectures.
+The [ice-rlab/protoacc/microbenchmarks/build-protobuf-all.sh](https://github.com/ice-rlab/protoacc/blob/master/microbenchmarks/build-protobuf-all.sh) script automates the installation of `protoc` compiler, C++ runtime and headers for both x86 and RISC-V architectures.
 
-The script installs them in a local directory and not in the `/usr/` path.
+The script installs them in local directories and not in the `/usr/` path. This allows installations to not conflict with each other.
 
