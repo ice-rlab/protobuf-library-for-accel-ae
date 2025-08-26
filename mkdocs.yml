@@ -2,7 +2,7 @@ site_name: Protocol Buffers Hardware Accelerator - ICE-RLab Docs
 nav:
   - Home: index.md
   - Installation: installation.md
-  - Contributing to the Docs: contributing.md
+  - Contributing Guidelines: contributing.md
 theme: readthedocs
 markdown_extensions:
   - admonition
