@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Contributing to the Docs - Protocol Buffers Hardware Accelerator - ICE-RLab Docs</title>
+    <title>Contributing Guidelines - Protocol Buffers Hardware Accelerator - ICE-RLab Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Contributing to the Docs";
+        var mkdocs_page_name = "Contributing Guidelines";
         var mkdocs_page_input_path = "contributing.md";
         var mkdocs_page_url = null;
       </script>
@@ -44,17 +44,23 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Contributing to the Docs</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Contributing Guidelines</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#recommended-pre-requisites">Recommended Pre-requisites</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#working-with-mkdocs">Working with MkDocs</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#deploying-the-docs">Deploying the Docs</a>
+    <li class="toctree-l2"><a class="reference internal" href="#software-and-hardware-guidelines">Software and Hardware Guidelines</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#docs-guidelines">Docs Guidelines</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#admonitions-aka-alerts">Admonitions (aka Alerts)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#recommended-pre-requisites">Recommended Pre-requisites</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#working-with-mkdocs">Working with MkDocs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#writingediting-docs-guidelines">Writing/Editing Docs Guidelines</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#admonitions-aka-alerts">Admonitions (aka Alerts)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deploying-the-docs">Deploying the Docs</a>
     </li>
         </ul>
     </li>
@@ -75,7 +81,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Contributing to the Docs</li>
+      <li class="breadcrumb-item active">Contributing Guidelines</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -84,8 +90,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="contributing-to-the-docs">Contributing to the Docs</h1>
-<h2 id="recommended-pre-requisites">Recommended Pre-requisites</h2>
+                <h1 id="contributing-guidelines">Contributing Guidelines</h1>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>This guidelines ONLY apply to the protocol buffers work done by the <a href="https://www.github.com/ice-rlab">ICE-RLab</a>. They do not apply to the protocol buffers work done by Google (and S Karandikar, et. al.)</p>
+</div>
+<h2 id="software-and-hardware-guidelines">Software and Hardware Guidelines</h2>
+<p>Contributions are accepted through Pull Requests to the corresponding repository.</p>
+<h2 id="docs-guidelines">Docs Guidelines</h2>
+<h3 id="recommended-pre-requisites">Recommended Pre-requisites</h3>
 <p>The following tools are recommended to have installed to contribute to the docs:</p>
 <ul>
 <li><a href="mkdocs.org">MkDocs</a></li>
@@ -93,21 +106,28 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The docs website is generated with <a href="mkdocs.org">MkDocs</a> which is a static site generator. </p>
+<p>The docs website is generated with <a href="mkdocs.org">MkDocs</a> which is a static site generator.</p>
+<p>Why Markdown instead of reStructuredText? Why MkDocs instead of another static site generator? </p>
+<p>One of the goals is to entice docs contributions. We expect Markdown to be familiar to potential docs contributors. MkDocs will most likely not be familiar, however, we expect it to be straighforward without much complexity. We feel confident that our choices keep the barrier to contribute to these docs low. If you disagree feel free to open an issue in the <a href="https://www.github.com/ice-rlab/protobuf-library-for-accel-ae">ice-rlab/protobuf-library-for-accel-ae</a>.</p>
 <p>Admonitions (like this one) are written as GitHub admonitions which the GitHub Admonitions for MkDocs plugin then converts into MkDocs admonitions. This allows the admonitions in the docs to be viewable in GitHub and in website form.</p>
 </div>
 <p>Install MkDocs and the GitHub Admonition for MkDocs plugin as Python packages with your Python package manager of choice in your Python (v)env of choice. The following command uses <code>pip</code> to install them in your default Python (v)env:</p>
 <pre><code class="language-bash">pip install mkdocs mkdocs-github-admonitions-plugin
 </code></pre>
-<h2 id="working-with-mkdocs">Working with MkDocs</h2>
+<h3 id="working-with-mkdocs">Working with MkDocs</h3>
 <p>Check out MkDocs' <a href="https://www.mkdocs.org/getting-started/">Getting Started</a> and <a href="https://www.mkdocs.org/user-guide/">User Guide</a> pages to get you up to speed on how to add new pages and have them show up on the nav bar, seeing your changes on your local browser and changing the MkDocs configuration to make these docs better!</p>
-<h2 id="deploying-the-docs">Deploying the Docs</h2>
+<h3 id="writingediting-docs-guidelines">Writing/Editing Docs Guidelines</h3>
+<h4 id="admonitions-aka-alerts">Admonitions (aka Alerts)</h4>
+<p>Admonitions, such as the note messages you've probably seen in the docs, must follow the GitHub admonition style as specified in the <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts">Alerts section</a> of the GitHub docs.</p>
+<h3 id="deploying-the-docs">Deploying the Docs</h3>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Deploying docs is a manual process done from a local <a href="https://www.github.com/ice-rlab/protobuf-library-for-accel-ae">ice-rlab/protobuf-library-for-accel-ae</a> repo. Therefore, make sure to have the latest changes to the docs before deploying.</p>
+<p>This could be automated with a GitHub Actions workflow. It hasn't been necessary so far.</p>
+</div>
 <p>To deploy the docs to the GitHub Pages site execute the command:</p>
 <pre><code class="language-bash">mkdocs gh-deploy
 </code></pre>
-<h2 id="docs-guidelines">Docs Guidelines</h2>
-<h3 id="admonitions-aka-alerts">Admonitions (aka Alerts)</h3>
-<p>Admonitions must follow the GitHub admonition style as specified in the <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts">Alerts section</a> of the GitHub docs.</p>
               
             </div>
           </div><footer>
